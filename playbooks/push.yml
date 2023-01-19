@@ -14,13 +14,13 @@
         register: git_add_status 
 
       - name: git username
-        shell: git config user.name "IlyasKadi"
+        shell: git config user.name "{{ git_username }}"
         args:
           chdir: "/home/ilyas/ansible_project"
         when: git_username is defined
 
       - name: git email
-        shell: git config user.email "ilyas.ait.el.kadi@gmail.com"
+        shell: git config user.email "{{ git_email }}"
         args:
           chdir: "/home/ilyas/ansible_project"
         when: git_email is defined
