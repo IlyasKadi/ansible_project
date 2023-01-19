@@ -1,0 +1,33 @@
+---
+- hosts: ansible
+  become: yes
+  tasks:
+      - name: git add all new files
+        shell: git add -A
+        args:
+          chdir: "/home/ilyas/ansible_project"
+
+      - name: git status
+        shell: git status
+        args:
+          chdir: "/home/ilyas/ansible_project"
+        register: git_add_status 
+
+      - name: git commit
+        shell: git commit -a -m "test push"
+        args:
+          chdir: "/home/ilyas/ansible_project"
+        ignore_errors: true
+
+      - name: git push
+        shell: git push --all --force
+        args:
+          chdir: "/home/ilyas/ansible_project"
+        environment:
+          GIT_SSH: "~/.ssh/id_rsa"
+
+      - name: git status
+        shell: git status
+        args:
+          chdir: "/home/ilyas/ansible_project"
+        register: git_add_status
