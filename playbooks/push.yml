@@ -24,10 +24,10 @@
         args:
           chdir: "/home/ilyas/ansible_project"
         environment:
-          GIT_SSH: "/home/ilyas/.ssh/id_rsa"
+          GIT_SSH: "~/.ssh/id_rsa"
 
-      - name: git status
-        shell: git status
-        args:
-          chdir: "/home/ilyas/ansible_project"
-        register: git_add_status
+      # - name: git status
+      #   shell: git status
+      #   args:
+      #     chdir: "/home/ilyas/ansible_project"
+      #   register: git_add_status
