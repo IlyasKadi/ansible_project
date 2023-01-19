@@ -1,25 +1,13 @@
-# ---
-# - hosts: ansible
-#   become: yes
-#   tasks:
-#     - name: Example clone of a single branch
-#       git:
-#         repo: git@github.com:IlyasKadi/ansible_project.git
-#         dest: /home/ilyas/ansible_project
-#         single_branch: yes
-#         version: master
-#         force: no
 ---
 - hosts: ansible
   become: yes
   tasks:
-    - name: git clone
+    - name: git clone ansible project (pull)
       git:
         repo: "git@github.com:IlyasKadi/ansible_project.git"
         dest: "/home/ilyas/ansible_project"
         accept_hostkey: yes
-        key_file: "/home/ilyas/.ssh/id_rsa"
-        force: no
+        key_file: "~/.ssh/id_rsa"
+        force: yes
         version: master
-        single_branch: yes
         
