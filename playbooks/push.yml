@@ -42,7 +42,7 @@
         args:
           chdir: "/home/ilyas/ansible_project"
         environment:
-          GIT_SSH: "~/.ssh/id_rsa"
+          GIT_SSH: "/home/ilyas/.ssh/id_rsa"
 
       # - name: git status
       #   shell: git status
