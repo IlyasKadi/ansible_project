@@ -1,0 +1,10 @@
+---
+ - hosts: server1
+   tasks:
+     - name: Fetch the file from the server1 to master
+#       run_once: yes
+       fetch: src=/tmp/backup/test.txt dest=/home/ilyas/ansible_project/backup/ flat=yes
+
+#     - name: Copy the file from master to mwiapp02
+#       copy: src=buffer/app01-to-app02.jar dest=/tmp/
+#       when: "{{ inventory_hostname == 'mwiapp02' }}"
