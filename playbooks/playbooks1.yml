@@ -6,3 +6,4 @@
   roles:
 #    - create-user
     - backup
+    - git
