@@ -13,11 +13,29 @@
           chdir: "/home/ilyas/ansible_project"
         register: git_add_status 
 
+      - name: git username
+        shell: git config user.name "IlyasKadi"
+        args:
+          chdir: "/home/ilyas/ansible_project"
+        when: git_username is defined
+
+      - name: git email
+        shell: git config user.email "ilyas.ait.el.kadi@gmail.com"
+        args:
+          chdir: "/home/ilyas/ansible_project"
+        when: git_email is defined
+
       - name: git commit
         shell: git commit -a -m "test push"
         args:
           chdir: "/home/ilyas/ansible_project"
         ignore_errors: true
+
+      - name: git wrapper
+        copy:
+          dest: "/home/ilyas/.ssh/ssh"
+          content: "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $*"
+          mode: 0700
 
       - name: git push
         shell: git push --force
