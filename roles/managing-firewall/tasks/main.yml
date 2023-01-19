@@ -1,0 +1,14 @@
+
+# ----- enable ports
+    - name: open port 
+      ufw:
+        rule: allow
+        port: "{{ port_to_open }}"
+        proto: tcp
+
+# ----- disable ports
+    - name: close port 3306
+      ufw:
+        rule: deny
+        port: "{{ port_to_close }}"
+        proto: tcp

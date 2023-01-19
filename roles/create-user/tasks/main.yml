@@ -1,0 +1,12 @@
+#- name: add user
+#  user:
+#    name: user2
+#    state: present
+        # groups: grp1 # to add the user to the group grp1 
+        # append: yes  # to add the user to the group grp1 and not replace the group with the user
+        
+# ----- delete user ------
+- name: delete user
+  user:
+    name: "{{ user_name_to_delete }}"
+    state: absent

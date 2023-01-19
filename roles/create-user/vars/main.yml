@@ -1,0 +1,5 @@
+---
+target_hosts: server1
+user_name_to_add: testuser
+user_password_to_add: user123
+user_name_to_delete: user2

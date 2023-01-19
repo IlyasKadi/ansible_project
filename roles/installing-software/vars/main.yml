@@ -1,0 +1,4 @@
+---
+target_hosts: server1
+software_to_install: ufw
+service_to_start: ufw

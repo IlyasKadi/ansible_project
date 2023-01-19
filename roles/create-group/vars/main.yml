@@ -1,0 +1,4 @@
+---
+target_hosts: server1
+group_name_to_add: testgroup
+group_name_to_delete: testgroup

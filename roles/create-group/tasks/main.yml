@@ -1,0 +1,12 @@
+
+  # ----- add group ------
+    - name: add group
+      group:
+        name: "{{ group_name_to_add }}"
+        state: present
+
+  # ----- delete group ------
+    - name: delete group
+      group:
+        name: "{{ group_name_to_delete }}"
+        state: absent 

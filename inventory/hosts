@@ -1,0 +1,20 @@
+[apache]
+#44.211.70.120 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[server1]
+3.86.94.75 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[server2]
+54.210.80.183 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[servers]
+#44.211.70.120 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
+3.86.94.75 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa  
+54.210.80.183 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[ansible]
+10.100.21.235 ansible_ssh_user=ilyas 
+##ansible_python_interpreter=/usr/bin/python3
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
