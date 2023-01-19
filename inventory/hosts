@@ -5,7 +5,6 @@
 54.210.80.183 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
 
 [servers]
-#44.211.70.120 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
 3.86.94.75 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa  
 54.210.80.183 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
 
