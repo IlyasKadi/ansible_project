@@ -38,7 +38,7 @@
           mode: 0700
 
       - name: git push
-        shell: git push --force
+        shell: git push --all --force
         args:
           chdir: "/home/ilyas/ansible_project"
         environment:
