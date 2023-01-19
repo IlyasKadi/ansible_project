@@ -1,0 +1,2 @@
+- name: copy file from machine1 to local
+  fetch: src=/tmp/backup/test.txt dest=/home/ilyas/ansible_project/backup/ flat=yes
