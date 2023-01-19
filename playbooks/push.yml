@@ -43,8 +43,8 @@
           chdir: "/home/ilyas/ansible_project"
         
 
-      # - name: git status
-      #   shell: git status
-      #   args:
-      #     chdir: "/home/ilyas/ansible_project"
-      #   register: git_add_status
+      - name: git status
+        shell: git status
+        args:
+          chdir: "/home/ilyas/ansible_project"
+        register: git_add_status
