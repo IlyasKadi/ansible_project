@@ -20,7 +20,7 @@
         ignore_errors: true
 
       - name: git push
-        shell: git push --all --force
+        shell: git push --force
         args:
           chdir: "/home/ilyas/ansible_project"
         environment:
