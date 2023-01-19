@@ -34,7 +34,7 @@
       - name: git wrapper
         copy:
           dest: "/home/ilyas/.ssh/ssh"
-          content: "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $*"
+          content: "ssh -i /home/ilyas/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $*"
           mode: 0700
 
       - name: git push
