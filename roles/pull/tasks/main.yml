@@ -5,11 +5,6 @@
     accept_hostkey: yes # accept_hostkey: yes will add the host key to the known_hosts file if it is not already present.
     key_file: "/home/ilyas/.ssh/id_rsa"
     force: yes # force: yes will overwrite the local repository if it already exists.
-    version: master
-    single_branch: yes
-    umask: "0644"
-    
-
-    
+    version: master # version: master will clone the master branch of the repository.
 
 

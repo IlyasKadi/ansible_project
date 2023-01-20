@@ -1,6 +1,0 @@
-test backup
-
-test restore
-
-test pull to ansible
-

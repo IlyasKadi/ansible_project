@@ -1,2 +1,5 @@
-- name: copy file from machine1 to local
-  fetch: src=/tmp/backup/test.txt dest=/home/ilyas/ansible_project/backup/ flat=yes
+- name: Fetch the file from the server1 to ansible
+  fetch:
+    src: "{{ remote_file_path }}"
+    dest: "{{ local_file_path }}"
+    flat: yes

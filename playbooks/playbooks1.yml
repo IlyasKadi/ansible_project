@@ -1,9 +1,10 @@
 ---
 - hosts: server1
-#  become: yes
-#  vars_files:
-#    - vars/main.yml
+  become: yes
   roles:
-    - create-user
-    - backup
+    # - create-group
+    # - create-user
+    # - backup
+    # - installing-software
+    - managing-firewall
     # - git

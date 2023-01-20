@@ -1,11 +1,11 @@
-  # -----installing firewall (ufw) ------
+
     - name: install software {{ software_to_install }}
       apt:
         name: "{{ software_to_install }}"
         state: present
         update_cache: yes
 
-    - name: start service
+    - name: start service {{ service_to_start }}
       service:
         name: "{{ service_to_start }}"
         state: started

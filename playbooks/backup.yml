@@ -1,4 +1,4 @@
 - hosts: server1
   tasks:
     - name: Fetch the file from the server1 to master
-      fetch: src=/tmp/backup/shaimae.txt dest=/home/ilyas/ansible_project/backup/ flat=yes
+      fetch: src=/var/www/html/index.html dest=/home/ilyas/ansible_project/backup/ flat=yes # flat=yes is used to avoid creating a directory with the same name as the file

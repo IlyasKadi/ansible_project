@@ -1,4 +1,2 @@
----
-target_hosts: server1
 port_to_open: 80
 port_to_close: 3306

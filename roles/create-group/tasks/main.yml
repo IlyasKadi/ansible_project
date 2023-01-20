@@ -1,12 +1,14 @@
 
   # ----- add group ------
-    - name: add group
+    - name: add group {{ group_name_to_add }}
       group:
         name: "{{ group_name_to_add }}"
         state: present
+      when: group_name_to_add is defined
 
   # ----- delete group ------
-    - name: delete group
+    - name: delete group {{ group_name_to_delete }}
       group:
         name: "{{ group_name_to_delete }}"
         state: absent 
+      when: group_name_to_delete is defined

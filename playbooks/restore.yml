@@ -1,5 +1,4 @@
----
 - hosts: server1
-    tasks:    
-    - name: Copy the file from ansible to server1
-      copy: src=/home/ilyas/ansible_project/backup/test.txt dest=/tmp/backup/test1.txt
+  tasks:    
+  - name: Copy the file from ansible to server1
+    copy: src=/home/ilyas/ansible_project/backup/shaimae.txt dest=/tmp/backup/shaimae.txt
