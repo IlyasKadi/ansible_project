@@ -1,7 +1,3 @@
----
-- hosts: ansible
-  become: yes
-  tasks:
       - name: git add all new files
         shell: git add -A # shell: git add -A will add all new files to the staging area.
         args: 
@@ -18,4 +14,4 @@
         shell: git push --all --force # shell: git push --all --force will push all to the remote repository.
         args:
           chdir: "/home/ilyas/ansible_project"
-        ignore_errors: true  
+        ignore_errors: true

@@ -1,10 +1,12 @@
 ---
-- hosts: server1
+- hosts: ansible
   become: yes
   roles:
     # - create-group
     # - create-user
     # - backup
     # - installing-software
-    - managing-firewall
-    # - git
+    # - managing-firewall
+    # - update-upgrade
+    # - pull # (run this role on localhost)
+    - push # (run this role on localhost)
