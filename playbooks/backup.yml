@@ -1,7 +1,4 @@
----
 - hosts: server1
-    tasks:
-      - name: Fetch the file from the server1 to master
-        fetch: src=/tmp/backup/test.txt dest=/home/ilyas/ansible_project/backup/ flat=yes
-
-
+  tasks:
+    - name: Fetch the file from the server1 to master
+      fetch: src=/tmp/backup/shaimae.txt dest=/home/ilyas/ansible_project/backup/ flat=yes

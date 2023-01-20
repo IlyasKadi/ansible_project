@@ -7,22 +7,22 @@
         args:
           chdir: "/home/ilyas/ansible_project"
 
-      - name: git status
-        shell: git status
-        args:
-          chdir: "/home/ilyas/ansible_project"
-        register: git_add_status 
+      # - name: git status
+      #   shell: git status
+      #   args:
+      #     chdir: "/home/ilyas/ansible_project"
+      #   register: git_add_status 
 
-      - name: git username
-        shell: git config user.name "IlyasKadi"
-        args:
-          chdir: "/home/ilyas/ansible_project"
+      # - name: git username
+      #   shell: git config user.name "IlyasKadi"
+      #   args:
+      #     chdir: "/home/ilyas/ansible_project"
 
 
-      - name: git email
-        shell: git config user.email "ilyas.ait.el.kadi@gmail.com"
-        args:
-          chdir: "/home/ilyas/ansible_project"
+      # - name: git email
+      #   shell: git config user.email "ilyas.ait.el.kadi@gmail.com"
+      #   args:
+      #     chdir: "/home/ilyas/ansible_project"
 
 
       - name: git commit
@@ -38,8 +38,8 @@
           chdir: "/home/ilyas/ansible_project"
         
 
-      - name: git status
-        shell: git status
-        args:
-          chdir: "/home/ilyas/ansible_project"
-        register: git_add_status
+      # - name: git status
+      #   shell: git status
+      #   args:
+      #     chdir: "/home/ilyas/ansible_project"
+      #   register: git_add_status
