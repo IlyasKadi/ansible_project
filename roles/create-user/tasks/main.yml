@@ -4,11 +4,13 @@
     state: present
     groups: "{{ group_name_to_add }}"
     append: yes # append the user to the group without removing the user from other groups
-
+    password: "*" # disable password login
+    update_password: on_create # update password only when the user is created
+  when: user_name_to_add is defined
         
 # ----- delete user ------
-- name: delete user {{ user_name_to_delete }}
-  user:
-    name: "{{ user_name_to_delete }}"
-    state: absent
-  when: user_name_to_delete is defined
+# - name: delete user {{ user_name_to_delete }}
+#   user:
+#     name: "{{ user_name_to_delete }}"
+#     state: absent
+#   when: user_name_to_delete is defined

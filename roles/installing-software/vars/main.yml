@@ -1,2 +1,2 @@
-software_to_install: ufw
-service_to_start: ufw
+software_to_install: apache2
+service_to_start: apache2

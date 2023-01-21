@@ -1,2 +1,2 @@
-port_to_open: 80
-port_to_close: 3306
+port_to_open: 443
+port_to_close: 443
