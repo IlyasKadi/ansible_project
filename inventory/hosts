@@ -1,5 +1,5 @@
 [server1]
-3.86.94.75 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ilyas/.ssh/id_rsa
+3.86.94.75 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ilyas/.ssh/id_rsa 
 
 [server2]
 54.210.80.183 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
@@ -11,6 +11,6 @@
 [ansible]
 192.168.174.132 ansible_ssh_user=ilyas ansible_ssh_private_key_file=~/.ssh/id_rsa
 ##ansible_python_interpreter=/usr/bin/python3
-[all:vars]
+[server1:vars]
 ansible_python_interpreter=/usr/bin/python3 
 

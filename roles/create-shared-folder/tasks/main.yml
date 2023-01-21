@@ -1,0 +1,13 @@
+- name: Create shared directory
+  file:
+    path: /home/ubuntu/shered_dir
+    state: directory
+    owner: user1
+    group: group1
+    mode: "0770"
+
+- name: Add user2 to shared group
+  user:
+    name: user2
+    groups: group1
+    append: true

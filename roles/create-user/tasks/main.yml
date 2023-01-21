@@ -1,16 +1,15 @@
-- name: create user {{ user_name_to_add }} to the group {{ group_name_to_add }}
+- name: Create users with specific password
   user:
-    name: "{{ user_name_to_add }}"
+    name: "{{ item.name }}"
     state: present
-    groups: "{{ group_name_to_add }}"
-    append: yes # append the user to the group without removing the user from other groups
-    password: "*" # disable password login
-    update_password: on_create # update password only when the user is created
-  when: user_name_to_add is defined
-        
-# ----- delete user ------
-# - name: delete user {{ user_name_to_delete }}
-#   user:
-#     name: "{{ user_name_to_delete }}"
-#     state: absent
-#   when: user_name_to_delete is defined
+    groups: group1
+    shell: /bin/bash
+    password: "{{ item.password | password_hash('sha512') }}"
+    update_password: on_create
+  with_items:
+    - { name: "user1", password: "pass1" }
+    - { name: "user2", password: "pass2" }
+    - { name: "user3", password: "pass3" }
+
+
+

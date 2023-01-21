@@ -4,9 +4,10 @@
   roles:
     # - create-group
     # - create-user
-    # - backup
+    # - create-shared-folder
     # - installing-software
     # - managing-firewall
     # - update-upgrade
+    # - backup
     # - pull # (run this role on localhost)
     - push # (run this role on localhost)
