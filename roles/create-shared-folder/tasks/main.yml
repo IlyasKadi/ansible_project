@@ -1,4 +1,4 @@
-- name: Create shared directory
+- name: Create shared directory owner by user1
   file:
     path: /home/ubuntu/shered_dir
     state: directory
@@ -8,6 +8,6 @@
 
 - name: Add user2 to shared group
   user:
-    name: user2
+    name: user2 
     groups: group1
     append: true

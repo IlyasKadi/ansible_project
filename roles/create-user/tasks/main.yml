@@ -1,7 +1,7 @@
 - name: Create users with specific password
   user:
     name: "{{ item.name }}"
-    state: present
+    state: absent
     groups: group1
     shell: /bin/bash
     password: "{{ item.password | password_hash('sha512') }}"
